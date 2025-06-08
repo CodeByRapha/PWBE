@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de livros</title> <!-- título da página -->
+</head>
+<body>
+    <h1>Cadastre um novo livro</h1> <!-- Cabeçalho principal da página -->
+    <form method="post">
+        {% csrf_token %} <!-- Token para segurança-->
+        {{form.as_p}} <!-- renderiza o formulário Django como parágrafos, exibindo campos de entrada -->
+        <button type="submit">Enviar</button> <!-- botão para enviar o formulário -->
+    </form>
+</body>
+</html>
