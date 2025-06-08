@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmando o delete</title>
+</head>
+<body>
+    <!-- mensagem de confirmação mostrando o título do livro a ser deletado -->
+    <h1>Tem certeza que deseja deletar o livro {{livro.titulo}}</h1>
+    <!-- forms para confirmar a exclusão -->
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sim</button>
+    </form>
+
+    <!-- Link para cancelar a exclusão e voltar para a lista de livros -->
+    <a href="{% url 'livro_read' %}">Não</a>
+    
+</body>
+</html>
